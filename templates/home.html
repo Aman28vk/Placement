@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Placement Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d61313;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #d50d0d;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 230px;
+  
+
+}
+
+input[type=submit]:hover {
+  background-color: #10ed3c;
+  color: black;
+
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #0387fb96;
+  padding: 20px;
+  display: flex;
+  justify-content: center
+}
+
+.form_wrapper {
+  flex:1;
+  text-align: center;
+}
+
+.selects{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c74949;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; 
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  
+  <form action="/send", name="send_data", method="post">
+
+   <h1>Welcome to my ML model page. Here you can predict your chances of your palcememt by giving some quick answers</h1>
+   <h2><center>Made by AMAN KUMAR</center></h2>
+
+      <label for="name"><center>Fill your Name</center> </label>
+      <input type="text"  name="name" placeholder="FILL NAME">
+
+<div class="form-group">
+  <label for="gender">Gender</label>
+  <select name="gender" class = "selects" >
+    <option value="" disabled selected>Select an option</option>
+    <option  value="M">Male</option>
+    <option value = "F">Female</option>
+  </select>
+</div>
+    
+    <label>Secondary Education Percentage - 10th Grade</label>
+    <input type="text"  name="ssc_p" placeholder="10th grade in percentage">
+
+
+    <label>Higher Secondary Education Percentage - 12th Grade</label>
+    <input type="text" name="hsc_p" placeholder="12th Percentage">
+
+
+    <div class="form-group">
+      <label for="hsc_s1">Specialization in Higher Secondary Education</label>
+      <select name="hsc_s1" class = "selects" >
+        <option value="" disabled selected>Select an option</option>
+        <option  value="Commerce">Commerce</option>
+        <option value = "Science">Science</option>
+        <option value = "Others">Others</option>
+      </select>
+    </div>
+   
+    <label>Degree Percentage</label>
+    <input type="text" name="degree_p" placeholder="Degree percentage">
+
+    
+
+    <div class="form-group">
+      <label for="degree_t1">Under Graduation(Degree type)- Field of degree education</label>
+      <select name="degree_t1" class = "selects" >
+        <option value="" disabled selected>Select an option</option>
+        <option  value="Sci and Tech">Sci and Tech</option>
+        <option value = "Comm and Mgmt">Comm and Mgmt</option>
+        <option value = "Arts">Arts</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="workex1">Work Experience</label>
+      <select name="workex1" class = "selects" >
+        <option value="" disabled selected>Select an option</option>
+        <option  value="No">No</option>
+        <option value = "Yes">Yes</option>
+      </select>
+    </div>
+    
+    <label>Employability test percentage ( conducted by college)</label>
+    <input type="text" name="etest_p" placeholder="in percentage">
+
+    <div class="form-group">
+      <label for="specialisation1">Specialization</label>
+      <select name="specialisation1" class = "selects" >
+        <option value="" disabled selected>Select an option</option>
+        <option  value="Mkt and HR">Mkt and HR</option>
+        <option value = "Mkt and Fin">Mkt and Fin</option>
+      </select>
+    </div>
+
+    <label>MBA Percentage</label>
+    <input type="text" name="mba_p" placeholder="In percentage">
+    
+
+    <div class="form_wrapper">
+       <input type="submit" value="Submit"/>
+    </div>
+
+  </form>
+
+
+</div>
+</body>
+</html>
